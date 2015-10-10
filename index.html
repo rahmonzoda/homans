@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+	<div class="container">
+
+		<div class="table-responsive">		
+		
+			<table class="humans table table-striped table-hover">
+	      		
+	      		<thead>
+	        		<tr>
+	          			<th column="rank">#</th>
+	          			<th column="firstname">Firstname</th>
+	          			<th column="lastname">Lastname</th>
+	          			<th column="age">Age</th>
+	          			<th column="email">Email</th>
+	          			<th>Actions</th>
+	       			</tr>
+		      	</thead>
+
+		      	<tbody class="human-list">
+		      		
+		      	</tbody>
+		    </table>
+		
+		    <a class="btn btn-default" href="#/add">Create</a>
+			
+		</div>
+
+		<script type="text/template" id="item-template">
+      		<td> <%- rank %> </td>
+      		<td> <%- name.first %> </td>
+      		<td> <%- name.last %> </td>
+      		<td> <%- age %> </td>
+      		<td> <%- email %> </td>
+      		<td>
+				<a href="#/edit/<%- guid %>">Edit</a>
+				<a href="#del/<%- guid %>">Delete</a>
+      		</td>
+		</script>
+		<script type="text/template" id="stats-template">
+
+			<div class="form-group">
+    			<label class="control-label" for="first">Firstname</label>
+    			<input type="text" class="form-control" id="first" name="first" value="<%- name.first %>" />
+    		</div>
+    		<div class="form-group">
+    			<label class="control-label" for="last">Lastname</label>
+    			<input type="text" class="form-control" id="last" name="last" value="<%- name.last %>" />
+    		</div>
+    		<div class="form-group">
+    			<label class="control-label" for="age">Age</label>
+    			<input type="text" class="form-control" id="age" name="age" value="<%- age %>" />
+    		</div>
+    		<div class="form-group">
+    			<label class="control-label" for="email">Email</label>
+    			<input type="email" class="form-control" id="email" name="email" value="<%-  email %>" />
+    		</div>
+    		
+    		<button type="button" class="btn btn-default" id="save">Save</button>
+
+
+			<ul class="errors"></ul>
+		
+		</script>
+
+	</div>
+	
+
+	<!-- Modal -->
+	<div class="modal fade" id="editmodal" tabindex="-1" role="dialog">
+	  	<div class="modal-dialog" role="document">
+	    	<div class="modal-content modal-sm">
+	     	 	<div class="modal-header">
+	        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	        			<span aria-hidden="true">&times;</span>
+	        		</button>
+	        		<h4 class="modal-title" id="myModalLabel">Homan</h4>
+	      		</div>
+	      		<div class="modal-body"></div>
+	    	</div>
+	  	</div>
+	</div>
+
+
+
+	<!-- libs -->
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="bower_components/underscore/underscore.js"></script>
+	<script src="bower_components/backbone/backbone-min.js"></script>
+	
+	
+	<!-- main file -->
+	<script src="js/models/human.js"></script>
+	<script src="js/collections/humans.js"></script>
+	<script src="js/views/human-details.js"></script>
+	<script src="js/views/human-view.js"></script>
+	<script src="js/views/app-view.js"></script>
+
+	<script src="js/app.js"></script>
+</body>
+</html>

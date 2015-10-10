@@ -1,0 +1,28 @@
+{
+  "name": "homans",
+  "version": "0.1.0",
+  "authors": [
+    "Ubayd Rakhmonzoda <ubaidinoyatov@gmail.com>"
+  ],
+  "description": "backbone table example",
+  "main": "index.html",
+  "keywords": [
+    "backbonejs",
+    "underscorejs"
+  ],
+  "license": "MIT",
+  "homepage": "http://ubaydinoyatov.github.io/homans",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.5",
+    "backbone": "~1.2.3",
+    "underscore": "~1.8.3"
+  }
+}

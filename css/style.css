@@ -1,0 +1,25 @@
+.container {
+	max-width: 800px;
+	margin: 25px auto;
+}
+.humans  thead .glyphicon {
+	font-size: 11px;
+	width: 11px;
+	height: 11px;
+}
+.humans th { 
+	white-space: nowrap; 
+	cursor: pointer; 
+}
+.humans th span { 
+	display: inline-block; 
+	margin-left: 5px; 
+}
+.errors {
+	padding-left: 15px;
+	margin-top: 10px;
+}
+.errors li {
+	color: #D03E3E;
+	font-size: 12px;
+}
